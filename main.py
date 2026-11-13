@@ -66,7 +66,7 @@ def G(w,y=0):
  return m
 def o(m):
  f,t,z=m
- if m==PV:return -9**9
+ if m==PV:return -N
  c=B[t]
  if c!='.'or z:return-(c!='.'and 10*V[c.upper()]-V[B[f].upper()]or 0)-(z and V[z.upper()]or 0)
  u=f*120+t
@@ -118,7 +118,7 @@ def n(d,a,b,w,p):
   if a>=b:
    if B[m[1]]=='.'and not m[2]:v=m[0]*120+m[1];L[p*2+1]=L[p*2];L[p*2]=v;I[v]+=1
    break
- if bs==-N:bs=-9999 if A(W[w],1-w)else 0;bm=0
+ if bs==-N:bs=-N if A(W[w],1-w)else 0;bm=0
  if not H:TT[k]=(d,(bs<=oa)*2-(bs>=b),bs,bm);p<1 and(BM:=bm);len(TT)>8000 and TT.clear()
  return bs
 def T(i):
