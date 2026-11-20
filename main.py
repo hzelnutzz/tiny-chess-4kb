@@ -135,7 +135,7 @@ def T(f):
 def c(m):
  f,t,z=m
  return chr(f%10+96)+str(10-f//10)+chr(t%10+96)+str(10-t//10)+(z or'').lower()
-def h(p,d=0):return j.load(Y.urlopen(Y.Request(J+p,d and j.dumps(d).encode()or None,{'Content-Type':'application/json'})))
+def h(p,d=0):return j.load(Y.urlopen(Y.Request(J+p,j.dumps(d).encode(),{'Content-Type':'application/json'})))
 def m():
  global J
  J=os.environ['MAKEFUN_ENV_URL']
