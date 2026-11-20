@@ -140,7 +140,7 @@ def m():
  global J
  J=os.environ['MAKEFUN_ENV_URL']
  while 1:
-  g=h('/game')
+  g=h('/game',{})
   while g.get('status')=='your_move':
    z=T(g['fen'])
    if not z:break
