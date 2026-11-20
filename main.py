@@ -89,17 +89,16 @@ def E(w):
    c=p<'a';u=p.upper()
    s+=(2*c-1)*(V[u]+5*ord(X['PNBRQK'.find(u)*32+((q//10-2)^7*c)*4+min(q%10-1,8-q%10)])-525)
  return s*(2*w-1)
-def q(a,b,w):
+def q(a,b,w,e=4):
  global Q,H
  Q+=1;H|=Q>N
  if H:return 0
- v=E(w)
- if v>=b:return b
- a=max(a,v)
+ a=max(a,E(w))
+ if a>=b or e<1:return a
  for m in G(w,1):
   u=M(*m)
   if A(W[w],1-w):U(u);continue
-  x=-q(-b,-a,1-w);U(u)
+  x=-q(-b,-a,1-w,e-1);U(u)
   if H:return a
   if x>a:a=x
   if a>=b:return b
