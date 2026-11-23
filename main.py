@@ -121,3 +121,4 @@ def m():
    g=h('/move',{'game':g.get('game',g.get('id')),'move':c(z)})
   if g.get('status')=='done':print(j.dumps(g));return
 if __name__=='__main__':m()
+#v11b
