@@ -20,7 +20,7 @@ def A(s,w):
  for o in S:
   t=s+o
   while B[t]=='.':t+=o
-  if B[t]in('qQ'[w],'brBR'[2*w+(o in R)]):return 1
+  if B[t]in('qQ'[w],'brBR'[(o in R)+2*w]):return 1
  return 0
 def M(f,t,z):
  global C,P,W;p=B[f];x=B[t];a=C;e=P;B[f]='.';B[t]=z or p
@@ -89,8 +89,9 @@ def n(d,a,b,w,e=4):
   u=M(*m)
   if A(W[w],1-w):U(u);continue
   z=d>1 and i>3 and not m[2]
-  x=-n(d-1-z,-b,-a,1-w,e-1);U(u)
-  if x>a and z:x=-n(d-1,-b,-a,1-w,e-1)
+  x=-n(d-1-z,-b,-a,1-w,e-1)
+  if x>=a and z:x=-n(d-1,-b,-a,1-w,e-1)
+  U(u)
   if H:return(a,v)[d>0]
   if x>v:v=x;m0=m
   if x>a:a=x
@@ -121,4 +122,3 @@ def m():
    g=h('/move',{'game':g.get('game',g.get('id')),'move':c(z)})
   if g.get('status')=='done':print(j.dumps(g));return
 if __name__=='__main__':m()
-#v11b
