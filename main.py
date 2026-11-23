@@ -74,7 +74,7 @@ def E(w):
   if p>'@':c=p<'a';u=p.upper();s+=(2*c-1)*(V[u]+5*X['PNBRQK'.find(u)*32+(q//10-2^7*c)*4+min(q%10-1,8-q%10)]-525)
  return s*(2*w-1)
 def n(d,a,b,w,e=4):
- global Q,H;Q+=1;H|=Q>25e4
+ global Q,H;Q+=1;H|=Q>12e4
  if H:return 0
  if d<1:
   a=max(a,E(w))
@@ -104,7 +104,7 @@ def n(d,a,b,w,e=4):
  return(a,v)[d>0]
 def T(f):
  global Q,H,BM;w=F(f);Q=0;H=0;BM=0;d=1;k=(''.join(B),C,P,w)
- while not H and d<4:
+ while not H and d<5:
   n(d,-9**9,9**9,w)
   if not H and k in Z:BM=Z[k][3]
   d+=1
